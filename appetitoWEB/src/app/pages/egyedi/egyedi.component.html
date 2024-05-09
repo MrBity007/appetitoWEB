@@ -1,0 +1,10 @@
+<h1>Egyedi Pizza Készítő</h1>
+<p>Minden egyedi pizzánk 3000Ft-ba kerül!</p>
+
+<mat-card class="custom-pizza-card">
+  <mat-card-title>Sorold fel mit szeretnél a pizzádra:</mat-card-title>
+  <input type="text" id="toppings" [(ngModel)]="toppings">
+</mat-card>
+<mat-card-actions>
+<button mat-raised-button color="primary" (click)="addToCart()">Kosárba</button>
+</mat-card-actions>

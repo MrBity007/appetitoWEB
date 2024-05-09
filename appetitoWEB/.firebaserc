@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "appetitoweb-7309b": {
+      "hosting": {
+        "appetito": [
+          "appetitoweb-7309b"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "appetitoweb-7309b"
+  }
+}

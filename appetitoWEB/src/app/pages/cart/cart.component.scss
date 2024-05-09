@@ -1,0 +1,35 @@
+.main{
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.card{
+  margin: 20px;
+  width: 75%;
+  max-width: 900px;
+}
+
+button{
+  font-size: 25px;
+  padding: 15px;
+  margin: 25px;
+}
+
+.pizza-ar{
+  font-size: 20px;
+  padding-top: 10px;
+}
+mat-card-title{
+  padding-left: 15px;
+  padding-top: 15px;
+}
+.middle{
+  text-align: center;
+}
+
+h1{
+  padding-top: 15px;
+  font-size: 30px;
+}
+

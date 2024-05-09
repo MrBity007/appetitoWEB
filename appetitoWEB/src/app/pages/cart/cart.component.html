@@ -1,0 +1,23 @@
+<h1 class="middle">Kosár</h1>
+<div class="main" *ngIf="cartItems.length > 0; else noItems">
+  <mat-card class="card" *ngFor="let item of cartItems;">
+    <mat-card-title>{{item.nev}}</mat-card-title>
+    <mat-card-content>
+      <p class="pizza-ar">{{item.ar}} Ft</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button (click)="deleteItem(item.pizzaID)">Törlés</button>
+    </mat-card-actions>
+  </mat-card>
+  <div class="middle">
+    <h2>Fizetendő összeg: {{fizetendo}} Ft</h2>
+    <h3>A szállítás várható ideje: {{ orderTime | deliveryTimePipe }}</h3>
+    <button mat-button (click)="deleteAllItems()">Megrendel</button>
+  </div>
+</div>
+<ng-template #noItems>
+  <div class="middle">
+    <h1>A kosarad üres!</h1>
+    <p>Rendelj valamit!</p>
+  </div>
+</ng-template>

@@ -1,0 +1,36 @@
+<h1 class="middle">Pizzáink</h1>
+<div class="etlap">
+  <div class="sorting-options">
+    <label for="sortDirection">Rendezés iránya:</label>
+    <select id="sortDirection" [(ngModel)]="sortDirection">
+      <option value="asc">Növekvő</option>
+      <option value="desc">Csökkenő</option>
+    </select>
+
+    <label for="limit">Limit:</label>
+    <select id="limit" [(ngModel)]="limit">
+      <option value="1">1</option>
+      <option value="10">10</option>
+    </select>
+
+    <button mat-button (click)="sorting()">Rendezés</button>
+  </div>
+  <mat-card class="card" *ngFor="let pizza of sortedPizzas;">
+    <mat-card-title>{{pizza.nev}}</mat-card-title>
+    <mat-card-content>
+      <div class="pizza-info">
+        <div class="pizza-details">
+          <p class="pizza-ar">{{pizza.ar}} Ft</p>
+          <p>Értékelés 5/{{pizza.ertekeles}}</p>
+          <p class="pizza-description">{{pizza.leiras}}</p>
+        </div>
+        <div class="pizza-image-container">
+          <img [src]="pizza.imageUrl" alt="Pizza kép" class="pizza-img">
+        </div>
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button (click)="addToCart(pizza)" class="btn">Kosárba</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
